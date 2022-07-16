@@ -8,14 +8,13 @@ public class Game {
     private String food;
     private String color;
     private Player player;
-    private static LinkedList<Game> games;
+    //private static LinkedList<Game> games = new LinkedList<>();
 
     public Game(String city,String food,String color,Player player) {
         this.city = city;
         this.food = food;
         this.color = color;
         this.player = player;
-        games.add(this);
     }
 
 //    public static int cityCheck(String name,String harf) {

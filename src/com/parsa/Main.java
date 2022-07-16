@@ -35,7 +35,8 @@ public class Main {
         System.out.print("رنگ: ");
         String color = scanner.nextLine();
         Game game = new Game(city,food,color,player);
-        player.createGame(game);
+        player.setGame(game);
+        //System.out.println(player.getGame().getFood());
     }
 
     public static void validation(String harf) {

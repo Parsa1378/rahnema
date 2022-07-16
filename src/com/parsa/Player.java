@@ -12,7 +12,12 @@ public class Player {
     public Player(String name) {
         this.name = name;
         this.points = 0;
-        players.add(this);
+        this.game = null;
+        addToList(this);
+    }
+
+    static void addToList(Player player) {
+        players.add(player);
     }
 
     public static int cityCheck(String harf, Player player) {
@@ -42,6 +47,9 @@ public class Player {
     }
 
     public static int colorCheck(String harf, Player player) {
+//        if (player.getGame().getColor()==null || player.getGame().getColor().equals("")) {
+//            return 0;
+//        }
         String first = player.getGame().getColor().substring(0,1);
         if (!first.equals(harf)) {
             return 0;
@@ -66,7 +74,7 @@ public class Player {
         return null;
     }
 
-    public void createGame(Game game) {
+    public void setGame(Game game) {
         this.game = game;
     }
 
