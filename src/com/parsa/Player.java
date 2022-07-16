@@ -82,5 +82,17 @@ public class Player {
         return game;
     }
 
+    public int getPoints() {
+        return points;
+    }
+
+    public static void result() {
+        System.out.println("نام و امتیاز");
+        for (Player player:players) {
+            int point = player.getPoints();
+            String name = player.getName();
+            System.out.println(name + " " + point);
+        }
+    }
 
 }
